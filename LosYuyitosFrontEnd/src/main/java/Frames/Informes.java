@@ -49,6 +49,7 @@ public class Informes extends javax.swing.JFrame {
 
         btnFiados.setText("Fiados");
 
+        btnVolver.setBackground(new java.awt.Color(167, 172, 172));
         btnVolver.setText("Volver");
         btnVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

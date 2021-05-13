@@ -42,6 +42,7 @@ public class Venta extends javax.swing.JFrame {
         btnPagar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(167, 172, 172));
 
         jLabel1.setText("Venta");
 

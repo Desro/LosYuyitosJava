@@ -74,6 +74,7 @@ public class Proveedores extends javax.swing.JFrame {
 
         btnEliminar.setText("Eliminar");
 
+        btnAtras.setBackground(new java.awt.Color(167, 172, 172));
         btnAtras.setText("Atrás");
         btnAtras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
