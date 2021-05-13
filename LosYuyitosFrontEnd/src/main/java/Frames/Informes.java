@@ -28,28 +28,33 @@ public class Informes extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        btnClientes = new javax.swing.JButton();
+        btnProveedores = new javax.swing.JButton();
+        btnVentas = new javax.swing.JButton();
+        btnGanancias = new javax.swing.JButton();
+        btnFiados = new javax.swing.JButton();
+        btnVolver = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("Informes");
 
-        jButton1.setText("Clientes");
+        btnClientes.setText("Clientes");
 
-        jButton2.setText("Proveedores");
+        btnProveedores.setText("Proveedores");
 
-        jButton3.setText("Ventas");
+        btnVentas.setText("Ventas");
 
-        jButton4.setText("Ganancias");
+        btnGanancias.setText("Ganancias");
 
-        jButton5.setText("Fiados");
+        btnFiados.setText("Fiados");
 
-        jButton6.setText("Volver");
+        btnVolver.setText("Volver");
+        btnVolver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVolverActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -63,15 +68,15 @@ public class Informes extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(95, 95, 95)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(btnGanancias, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnProveedores, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
+                            .addComponent(btnClientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnVentas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnFiados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(95, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton6)
+                .addComponent(btnVolver)
                 .addGap(18, 18, 18))
         );
         layout.setVerticalGroup(
@@ -80,29 +85,36 @@ public class Informes extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addComponent(jLabel1)
                 .addGap(44, 44, 44)
-                .addComponent(jButton1)
+                .addComponent(btnClientes)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addComponent(btnProveedores)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton3)
+                .addComponent(btnVentas)
                 .addGap(18, 18, 18)
-                .addComponent(jButton4)
+                .addComponent(btnGanancias)
                 .addGap(18, 18, 18)
-                .addComponent(jButton5)
+                .addComponent(btnFiados)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton6)
+                .addComponent(btnVolver)
                 .addContainerGap(13, Short.MAX_VALUE))
         );
 
-        jButton1.getAccessibleContext().setAccessibleName("btnClientes");
-        jButton2.getAccessibleContext().setAccessibleName("btnProveedores");
-        jButton3.getAccessibleContext().setAccessibleName("btnVentas");
-        jButton4.getAccessibleContext().setAccessibleName("btnGanancias");
-        jButton5.getAccessibleContext().setAccessibleName("btnFiados");
-        jButton6.getAccessibleContext().setAccessibleName("btnVolver");
+        btnClientes.getAccessibleContext().setAccessibleName("btnClientes");
+        btnProveedores.getAccessibleContext().setAccessibleName("btnProveedores");
+        btnVentas.getAccessibleContext().setAccessibleName("btnVentas");
+        btnGanancias.getAccessibleContext().setAccessibleName("btnGanancias");
+        btnFiados.getAccessibleContext().setAccessibleName("btnFiados");
+        btnVolver.getAccessibleContext().setAccessibleName("btnVolver");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
+        // TODO add your handling code here:
+        Menu mn = new Menu();
+        mn.setVisible(true);
+        super.dispose();
+    }//GEN-LAST:event_btnVolverActionPerformed
 
     /**
      * @param args the command line arguments
@@ -140,12 +152,12 @@ public class Informes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
+    private javax.swing.JButton btnClientes;
+    private javax.swing.JButton btnFiados;
+    private javax.swing.JButton btnGanancias;
+    private javax.swing.JButton btnProveedores;
+    private javax.swing.JButton btnVentas;
+    private javax.swing.JButton btnVolver;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
