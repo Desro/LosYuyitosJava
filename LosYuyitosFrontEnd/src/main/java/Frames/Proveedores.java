@@ -47,6 +47,7 @@ public class Proveedores extends javax.swing.JFrame {
         btnAtras = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(167, 172, 172));
 
         jLabel1.setText("Ingreso de proveedores");
 

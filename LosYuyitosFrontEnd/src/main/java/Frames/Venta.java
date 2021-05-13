@@ -44,6 +44,7 @@ public class Venta extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(167, 172, 172));
 
+        jLabel1.setFont(new java.awt.Font("Rockwell", 0, 24)); // NOI18N
         jLabel1.setText("Venta");
 
         jLabel2.setText("Rut cliente");
@@ -136,7 +137,7 @@ public class Venta extends javax.swing.JFrame {
                 .addComponent(btnPagar)
                 .addGap(44, 44, 44)
                 .addComponent(btnVolver)
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
 
         btnVolver.getAccessibleContext().setAccessibleName("btnVolver");
