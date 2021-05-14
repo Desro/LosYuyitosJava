@@ -38,6 +38,7 @@ public class Informes extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(167, 172, 172));
 
+        jLabel1.setBackground(new java.awt.Color(167, 172, 172));
         jLabel1.setFont(new java.awt.Font("Rockwell", 0, 24)); // NOI18N
         jLabel1.setText("Informes");
 
