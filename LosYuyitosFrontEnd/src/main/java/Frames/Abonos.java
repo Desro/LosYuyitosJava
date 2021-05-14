@@ -129,6 +129,7 @@ public class Abonos extends javax.swing.JFrame {
         btnVolver.getAccessibleContext().setAccessibleName("btnVolver");
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed

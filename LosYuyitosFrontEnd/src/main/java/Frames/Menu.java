@@ -29,8 +29,8 @@ public class Menu extends javax.swing.JFrame {
 
         btnProveedores = new javax.swing.JButton();
         btnVentas = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        btnPedidoProductos = new javax.swing.JButton();
+        btnClientes = new javax.swing.JButton();
+        btnPedidoProveedores = new javax.swing.JButton();
         btnAbonos = new javax.swing.JButton();
         btnIformes = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -52,14 +52,19 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setText("jButton2");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnClientes.setText("Clientes");
+        btnClientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnClientesActionPerformed(evt);
             }
         });
 
-        btnPedidoProductos.setText("Pedido de productos");
+        btnPedidoProveedores.setText("Pedido Proveedores");
+        btnPedidoProveedores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPedidoProveedoresActionPerformed(evt);
+            }
+        });
 
         btnAbonos.setText("Abonos");
         btnAbonos.addActionListener(new java.awt.event.ActionListener() {
@@ -85,60 +90,70 @@ public class Menu extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(42, 42, 42)
+                                .addComponent(btnClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(39, 39, 39)
+                                .addComponent(btnAbonos, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(50, 50, 50)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnProveedores, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnVentas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(51, 51, 51)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnPedidoProductos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnAbonos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(btnPedidoProveedores, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnProveedores, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(43, 43, 43)
-                        .addComponent(btnIformes, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnIformes, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnVentas, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(211, 211, 211)
                         .addComponent(jLabel1)))
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
+                .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnPedidoProductos)
-                        .addGap(53, 53, 53)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnAbonos)
-                            .addComponent(btnIformes)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnProveedores)
-                        .addGap(53, 53, 53)
-                        .addComponent(btnVentas)))
-                .addGap(45, 45, 45)
-                .addComponent(jButton3)
-                .addContainerGap(142, Short.MAX_VALUE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnPedidoProveedores)
+                        .addComponent(btnVentas))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnAbonos)
+                        .addGap(9, 9, 9)))
+                .addGap(53, 53, 53)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnIformes)
+                    .addComponent(btnClientes)
+                    .addComponent(btnProveedores))
+                .addContainerGap(77, Short.MAX_VALUE))
         );
 
         btnProveedores.getAccessibleContext().setAccessibleName("btnProveedores");
         btnVentas.getAccessibleContext().setAccessibleName("btnVentas");
-        btnPedidoProductos.getAccessibleContext().setAccessibleName("btnPedido");
+        btnPedidoProveedores.getAccessibleContext().setAccessibleName("btnPedido");
         btnAbonos.getAccessibleContext().setAccessibleName("btnAbonos");
         btnIformes.getAccessibleContext().setAccessibleName("btnInformes");
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVentasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVentasActionPerformed
         // TODO add your handling code here:
+        VentaProductos vp = new VentaProductos();
+        vp.setVisible(true);
+        super.dispose();
     }//GEN-LAST:event_btnVentasActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+        Clientes cl = new Clientes();
+        cl.setVisible(true);
+        super.dispose();
+    }//GEN-LAST:event_btnClientesActionPerformed
 
     private void btnAbonosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbonosActionPerformed
         // TODO add your handling code here:
@@ -160,6 +175,13 @@ public class Menu extends javax.swing.JFrame {
         prov.setVisible(true);
         super.dispose();
     }//GEN-LAST:event_btnProveedoresActionPerformed
+
+    private void btnPedidoProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPedidoProveedoresActionPerformed
+        // TODO add your handling code here:
+        PedidoProveedores pv = new PedidoProveedores();
+        pv.setVisible(true);
+        super.dispose();
+    }//GEN-LAST:event_btnPedidoProveedoresActionPerformed
 
     /**
      * @param args the command line arguments
@@ -198,11 +220,11 @@ public class Menu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAbonos;
+    private javax.swing.JButton btnClientes;
     private javax.swing.JButton btnIformes;
-    private javax.swing.JButton btnPedidoProductos;
+    private javax.swing.JButton btnPedidoProveedores;
     private javax.swing.JButton btnProveedores;
     private javax.swing.JButton btnVentas;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

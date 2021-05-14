@@ -133,6 +133,7 @@ public class Venta extends javax.swing.JFrame {
         btnPagar.getAccessibleContext().setAccessibleName("btnPagar");
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
