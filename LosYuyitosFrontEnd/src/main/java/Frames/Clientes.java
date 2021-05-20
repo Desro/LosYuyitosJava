@@ -96,6 +96,11 @@ public class Clientes extends javax.swing.JFrame {
         jLabel10.setText("Comuna");
 
         btnCrear.setText("Crear");
+        btnCrear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCrearActionPerformed(evt);
+            }
+        });
 
         btnLimpiar.setText("Limpiar");
 
@@ -223,6 +228,11 @@ public class Clientes extends javax.swing.JFrame {
         mn.setVisible(true);
         super.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void btnCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btnCrearActionPerformed
 
     /**
      * @param args the command line arguments
