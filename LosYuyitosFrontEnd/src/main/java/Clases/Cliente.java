@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Frames;
+package Clases;
 
 /**
  *
- * @author Pato
+ * @author User
  */
 public class Cliente {
-//Atributos
+    //Atributos
    private String rutCliente;
    private String nombreCliente;
    private String telefonoCliente;
@@ -108,4 +108,3 @@ public void setIdRegion(int idRegion){
 }
 
 }
-

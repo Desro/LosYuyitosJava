@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Frames;
+package Clases;
 
 /**
  *
- * @author Pato
+ * @author User
  */
 public class Usuario {
- //atributos
+    //atributos
     private String idUsuario;
     private String nombreUsuario;
     private boolean administrador;
@@ -56,5 +56,5 @@ public class Usuario {
     public void setVigente(boolean vigente){
     
     }
+    
 }
-
