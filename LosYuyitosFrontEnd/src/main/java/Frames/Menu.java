@@ -128,7 +128,7 @@ public class Menu extends javax.swing.JFrame {
                     .addComponent(btnIformes)
                     .addComponent(btnClientes)
                     .addComponent(btnProveedores))
-                .addContainerGap(77, Short.MAX_VALUE))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
 
         btnProveedores.getAccessibleContext().setAccessibleName("btnProveedores");
@@ -150,7 +150,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void btnClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientesActionPerformed
         // TODO add your handling code here:
-        Clientes cl = new Clientes();
+        AgregarClientes cl = new AgregarClientes();
         cl.setVisible(true);
         super.dispose();
     }//GEN-LAST:event_btnClientesActionPerformed

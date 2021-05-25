@@ -19,9 +19,9 @@ public class Proveedor {
     private int idRegion;
     private int idProvincia;
     private int idComuna;
-    private boolean vigeancia;
+    private boolean vigencia;
 
-    public Proveedor(int idProveedor, String nombreProveedor, String telefono, String email, String direccion, int idRubro, int idRegion, int idProvincia, int idComuna, boolean vigeancia) {
+    public Proveedor(int idProveedor, String nombreProveedor, String telefono, String email, String direccion, int idRubro, int idRegion, int idProvincia, int idComuna, boolean vigencia) {
         this.idProveedor = idProveedor;
         this.nombreProveedor = nombreProveedor;
         this.telefono = telefono;
@@ -31,9 +31,14 @@ public class Proveedor {
         this.idRegion = idRegion;
         this.idProvincia = idProvincia;
         this.idComuna = idComuna;
-        this.vigeancia = vigeancia;
+        this.vigencia = vigencia;
     }
 
+    public Proveedor()
+    {
+        
+    }
+    
     public int getIdProveedor() {
         return idProveedor;
     }
@@ -106,12 +111,12 @@ public class Proveedor {
         this.idComuna = idComuna;
     }
 
-    public boolean isVigeancia() {
-        return vigeancia;
+    public boolean isVigencia() {
+        return vigencia;
     }
 
-    public void setVigeancia(boolean vigeancia) {
-        this.vigeancia = vigeancia;
+    public void setVigencia(boolean vigeancia) {
+        this.vigencia = vigeancia;
     }
 
     

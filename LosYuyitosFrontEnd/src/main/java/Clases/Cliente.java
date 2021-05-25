@@ -34,6 +34,11 @@ public Cliente(String rutCliente, String nombreCliente, String telefonoCliente, 
     this.idRegion = idRegion;
 }
 
+public Cliente()
+{
+    
+}
+
 //accesadores y mutadores
 public String getRutCliente(){
     return rutCliente;
