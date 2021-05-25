@@ -203,12 +203,12 @@ public class Proveedores extends javax.swing.JFrame {
         // TODO add your handling code here:
         try{
             Proveedor auxProveedor = new Proveedor();
-            if(this.txtDireccion.getText() == null || this.txtEmail.getText() == null ||
+            if(this.txtDireccion.getText() == "" || this.txtEmail.getText() == null ||
                this.txtNombreProveedor.getText() == null || this.txtTelefono.getText() == null ||
                this.cmbRegion.getSelectedIndex() == 0 || this.cmbProvincia.getSelectedIndex() == 0 ||
                this.cmbComuna.getSelectedIndex() == 0 || this.cmbRubro.getSelectedIndex() == 0)
             {
-                
+                JOptionPane.showMessageDialog(null, "Todos los campos son obligatorios.");
             }
             else
             {

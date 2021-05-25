@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Frames;
-
+import Clases.Pedido;
 /**
  *
  * @author User
@@ -101,6 +101,11 @@ public class PedidoProveedores extends javax.swing.JFrame {
         jLabel7.setText("Total del pedido");
 
         btnHacerPedido.setText("Hacer pedido");
+        btnHacerPedido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHacerPedidoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -216,6 +221,17 @@ public class PedidoProveedores extends javax.swing.JFrame {
         mn.setVisible(true);
         super.dispose();
     }//GEN-LAST:event_btnVolverActionPerformed
+
+    private void btnHacerPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHacerPedidoActionPerformed
+        // TODO add your handling code here:
+        try{
+            Pedido auxPedido = new Pedido();
+        }
+        catch(Exception ex)
+        {
+            
+        }
+    }//GEN-LAST:event_btnHacerPedidoActionPerformed
 
     /**
      * @param args the command line arguments

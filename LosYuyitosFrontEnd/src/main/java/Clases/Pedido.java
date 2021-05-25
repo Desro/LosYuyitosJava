@@ -26,6 +26,11 @@ public class Pedido {
         this.total = total;
     }
     
+    public Pedido()
+    {
+        
+    }
+    
     //getter and setter
 
     public int getIdPedido() {
