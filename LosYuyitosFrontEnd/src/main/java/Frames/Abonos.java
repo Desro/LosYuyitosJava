@@ -186,16 +186,7 @@ public class Abonos extends javax.swing.JFrame {
 
     private void btnAbonarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbonarActionPerformed
         // TODO add your handling code here:
-        try{
-            if(this.txtRutCliente.getText() == "" || this.txtMontoAbono.getText() == "")
-            {
-                JOptionPane.showMessageDialog(null, "Todos los campos son obligatorios.");
-            }
-        }
-        catch(Exception ex)
-        {
-            
-        }
+        
     }//GEN-LAST:event_btnAbonarActionPerformed
 
     /**
