@@ -29,30 +29,35 @@
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="211" max="-2" attributes="0"/>
+                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                              <Component id="btnClientes" min="-2" pref="94" max="-2" attributes="0"/>
-                          </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                               <Component id="btnAbonos" min="-2" pref="97" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="btnAdministracionBoletas" min="-2" pref="94" max="-2" attributes="0"/>
+                                  <Component id="btnClientes" min="-2" pref="94" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="btnPedidoProveedores" max="32767" attributes="0"/>
                           <Component id="btnProveedores" max="32767" attributes="0"/>
+                          <Component id="btnActualizarFiado" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="btnIformes" min="-2" pref="93" max="-2" attributes="0"/>
-                          <Component id="btnVentas" min="-2" pref="93" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="btnIformes" alignment="0" pref="93" max="32767" attributes="0"/>
+                          <Component id="btnVentas" alignment="0" pref="93" max="32767" attributes="0"/>
+                          <Component id="btnRecepcion" alignment="0" max="32767" attributes="0"/>
                       </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="211" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="43" max="32767" attributes="0"/>
@@ -81,7 +86,13 @@
                   <Component id="btnClientes" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnProveedores" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="72" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnAdministracionBoletas" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnRecepcion" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnActualizarFiado" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="76" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -157,6 +168,30 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Menu"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnAdministracionBoletas">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Adm Boletas"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAdministracionBoletasActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnRecepcion">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Recepcion"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRecepcionActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnActualizarFiado">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Actualizar Fiado"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnActualizarFiadoActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
