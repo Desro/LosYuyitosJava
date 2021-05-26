@@ -84,7 +84,7 @@ public class Menu extends javax.swing.JFrame {
         });
 
         jLabel1.setFont(new java.awt.Font("Rockwell", 0, 24)); // NOI18N
-        jLabel1.setText("Menu");
+        jLabel1.setText("Menú");
 
         btnAdministracionBoletas.setText("Adm Boletas");
         btnAdministracionBoletas.addActionListener(new java.awt.event.ActionListener() {

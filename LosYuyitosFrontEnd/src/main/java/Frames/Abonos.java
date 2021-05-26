@@ -30,8 +30,6 @@ public class Abonos extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        txtRutCliente = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
         txtDeudaAsociada = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         txtMontoAbono = new javax.swing.JTextField();
@@ -42,15 +40,18 @@ public class Abonos extends javax.swing.JFrame {
         txtBoleta = new javax.swing.JTextField();
         txtFechaVencimiento = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        txtNuevoMonto = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(167, 172, 172));
 
         jLabel1.setBackground(new java.awt.Color(167, 172, 172));
         jLabel1.setFont(new java.awt.Font("Rockwell", 0, 24)); // NOI18N
-        jLabel1.setText("Abonos");
-
-        jLabel2.setText("Rut cliente");
+        jLabel1.setText("Gestión de Abonos");
 
         jLabel3.setText("Deuda asociada");
 
@@ -75,63 +76,94 @@ public class Abonos extends javax.swing.JFrame {
 
         jLabel6.setText("Fecha Vencimiento");
 
+        jLabel7.setText("Rut adeudados:");
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jLabel8.setBackground(new java.awt.Color(167, 172, 172));
+        jLabel8.setFont(new java.awt.Font("Rockwell", 0, 24)); // NOI18N
+        jLabel8.setText("Datos de la deuda");
+
+        jLabel9.setText("Nueva deuda");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 157, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(151, 151, 151))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(297, Short.MAX_VALUE)
-                .addComponent(btnVolver)
-                .addGap(34, 34, 34))
             .addGroup(layout.createSequentialGroup()
-                .addGap(57, 57, 57)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel6))
-                .addGap(18, 18, 18)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel6)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addGap(1, 1, 1))
+                            .addComponent(jLabel9))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(txtFechaVencimiento)
+                            .addComponent(txtBoleta, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtDeudaAsociada, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtMontoAbono, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
+                            .addComponent(txtNuevoMonto, javax.swing.GroupLayout.Alignment.LEADING)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(164, 164, 164)
+                            .addComponent(btnAbonar))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(44, 44, 44)
+                            .addComponent(jLabel7)
+                            .addGap(18, 18, 18)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(71, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnAbonar)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(txtFechaVencimiento)
-                        .addComponent(txtBoleta, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
-                        .addComponent(txtDeudaAsociada, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(txtRutCliente, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(txtMontoAbono)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnVolver)
+                        .addGap(34, 34, 34))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addGap(84, 84, 84))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(81, 81, 81))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(29, 29, 29)
                 .addComponent(jLabel1)
-                .addGap(57, 57, 57)
+                .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtRutCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtDeudaAsociada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
-                .addGap(18, 18, 18)
+                    .addComponent(jLabel7)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(36, 36, 36)
+                .addComponent(jLabel8)
+                .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtBoleta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
                 .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtDeudaAsociada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(txtMontoAbono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
-                .addGap(27, 27, 27)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(txtNuevoMonto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtFechaVencimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addGap(29, 29, 29)
                 .addComponent(btnAbonar)
                 .addGap(21, 21, 21)
                 .addComponent(btnVolver)
@@ -204,16 +236,19 @@ public class Abonos extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAbonar;
     private javax.swing.JButton btnVolver;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField txtBoleta;
     private javax.swing.JTextField txtDeudaAsociada;
     private javax.swing.JTextField txtFechaVencimiento;
     private javax.swing.JTextField txtMontoAbono;
-    private javax.swing.JTextField txtRutCliente;
+    private javax.swing.JTextField txtNuevoMonto;
     // End of variables declaration//GEN-END:variables
 }
