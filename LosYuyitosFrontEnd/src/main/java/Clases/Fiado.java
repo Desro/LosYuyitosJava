@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Clases;
+import java.util.ArrayList;
 import java.util.Date;
 /**
  *
@@ -18,7 +19,9 @@ public class Fiado {
     private double totalPago;
     private boolean vencido;
     private String rutCliente;
+    //Hay que hacer la lista, el string no sirve...
     private String abonosRealizados;
+    //private ArrayList<Abono> AbonoRealizado; 
 
     public Fiado(int idFiado, Date fechaFiado, Date fechaVencimiento, int idBoleta, double totalAbonos, double totalPago, boolean vencido, String rutCliente, String abonosRealizados) {
         this.idFiado = idFiado;
