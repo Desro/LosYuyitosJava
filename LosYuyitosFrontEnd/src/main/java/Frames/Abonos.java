@@ -20,6 +20,13 @@ public class Abonos extends javax.swing.JFrame {
         initComponents();
     }
 
+    public void habilitarBotonAbonar()
+    {
+        if(!txtBoleta.getText().isEmpty() && !txtDeudaAsociada.getText().isEmpty() && !txtMontoAbono.getText().isEmpty() && !txtNuevoMonto.getText().isEmpty() && !txtFechaVencimiento.getText().isEmpty())
+        {
+            btnAbonar.setEnabled(true);
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -53,11 +60,24 @@ public class Abonos extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Rockwell", 0, 24)); // NOI18N
         jLabel1.setText("Gestión de Abonos");
 
+        txtDeudaAsociada.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtDeudaAsociadaKeyReleased(evt);
+            }
+        });
+
         jLabel3.setText("Deuda asociada");
+
+        txtMontoAbono.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtMontoAbonoKeyReleased(evt);
+            }
+        });
 
         jLabel4.setText("Monto de abono");
 
         btnAbonar.setText("Abonar");
+        btnAbonar.setEnabled(false);
         btnAbonar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAbonarActionPerformed(evt);
@@ -75,8 +95,17 @@ public class Abonos extends javax.swing.JFrame {
         jLabel5.setText("N° boleta");
 
         txtBoleta.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtBoletaKeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtBoletaKeyTyped(evt);
+            }
+        });
+
+        txtFechaVencimiento.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtFechaVencimientoKeyReleased(evt);
             }
         });
 
@@ -90,12 +119,23 @@ public class Abonos extends javax.swing.JFrame {
                 cboRutAdeudadosItemStateChanged(evt);
             }
         });
+        cboRutAdeudados.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                cboRutAdeudadosKeyReleased(evt);
+            }
+        });
 
         jLabel8.setBackground(new java.awt.Color(167, 172, 172));
         jLabel8.setFont(new java.awt.Font("Rockwell", 0, 24)); // NOI18N
         jLabel8.setText("Datos de la deuda");
 
         jLabel9.setText("Nueva deuda");
+
+        txtNuevoMonto.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtNuevoMontoKeyReleased(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -209,6 +249,30 @@ public class Abonos extends javax.swing.JFrame {
     private void cboRutAdeudadosItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cboRutAdeudadosItemStateChanged
         // TODO add your handling code here:
     }//GEN-LAST:event_cboRutAdeudadosItemStateChanged
+
+    private void txtBoletaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBoletaKeyReleased
+        habilitarBotonAbonar();
+    }//GEN-LAST:event_txtBoletaKeyReleased
+
+    private void txtDeudaAsociadaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDeudaAsociadaKeyReleased
+        habilitarBotonAbonar();
+    }//GEN-LAST:event_txtDeudaAsociadaKeyReleased
+
+    private void txtMontoAbonoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMontoAbonoKeyReleased
+        habilitarBotonAbonar();
+    }//GEN-LAST:event_txtMontoAbonoKeyReleased
+
+    private void txtNuevoMontoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNuevoMontoKeyReleased
+        habilitarBotonAbonar();
+    }//GEN-LAST:event_txtNuevoMontoKeyReleased
+
+    private void txtFechaVencimientoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtFechaVencimientoKeyReleased
+        habilitarBotonAbonar();
+    }//GEN-LAST:event_txtFechaVencimientoKeyReleased
+
+    private void cboRutAdeudadosKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cboRutAdeudadosKeyReleased
+        habilitarBotonAbonar();
+    }//GEN-LAST:event_cboRutAdeudadosKeyReleased
 
     /**
      * @param args the command line arguments

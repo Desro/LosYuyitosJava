@@ -142,6 +142,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtDeudaAsociada">
+      <Events>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtDeudaAsociadaKeyReleased"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
@@ -149,6 +152,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtMontoAbono">
+      <Events>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtMontoAbonoKeyReleased"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
@@ -158,6 +164,7 @@
     <Component class="javax.swing.JButton" name="btnAbonar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Abonar"/>
+        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
       <AccessibilityProperties>
         <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="btnPagar"/>
@@ -187,10 +194,14 @@
     </Component>
     <Component class="javax.swing.JTextField" name="txtBoleta">
       <Events>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtBoletaKeyReleased"/>
         <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtBoletaKeyTyped"/>
       </Events>
     </Component>
     <Component class="javax.swing.JTextField" name="txtFechaVencimiento">
+      <Events>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtFechaVencimientoKeyReleased"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
@@ -215,6 +226,7 @@
       </Properties>
       <Events>
         <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="cboRutAdeudadosItemStateChanged"/>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="cboRutAdeudadosKeyReleased"/>
       </Events>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -237,6 +249,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtNuevoMonto">
+      <Events>
+        <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtNuevoMontoKeyReleased"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
