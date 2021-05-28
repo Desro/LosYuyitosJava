@@ -19,7 +19,24 @@ public class AgregarClientes extends javax.swing.JFrame {
         initComponents();
         
     }
-
+    
+    public void habilitarBoton()
+    {
+      if(!txtRutCliente.getText().isEmpty() && !txtNombre.getText().isEmpty() && !txtTelefono.getText().isEmpty() && !txtEmail.getText().isEmpty() && !txtDireccion.getText().isEmpty() && cmbRegion.getSelectedIndex() > 0 && cmbProvincia.getSelectedIndex() > 0 && cmbComuna.getSelectedIndex() > 0 )
+      {
+         btnCrear.setEnabled(true);    
+      }
+    }
+    
+    public void habilitarBotonLimpiar()
+    {
+        if(!txtRutCliente.getText().isEmpty() || !txtNombre.getText().isEmpty() || !txtTelefono.getText().isEmpty() || !txtEmail.getText().isEmpty() || !txtDireccion.getText().isEmpty() || cmbRegion.getSelectedIndex() > 0 || cmbProvincia.getSelectedIndex() > 0 || cmbComuna.getSelectedIndex() > 0 )
+        {
+            btnLimpiar.setEnabled(true);
+        }
+    }
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -55,7 +72,14 @@ public class AgregarClientes extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(167, 172, 172));
 
+        txtEmail.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtEmailKeyReleased(evt);
+            }
+        });
+
         btnCrear.setText("Crear");
+        btnCrear.setEnabled(false);
         btnCrear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCrearActionPerformed(evt);
@@ -65,6 +89,7 @@ public class AgregarClientes extends javax.swing.JFrame {
         jLabel6.setText("Dirección");
 
         btnLimpiar.setText("Limpiar");
+        btnLimpiar.setEnabled(false);
         btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLimpiarActionPerformed(evt);
@@ -79,8 +104,29 @@ public class AgregarClientes extends javax.swing.JFrame {
                 txtDireccionActionPerformed(evt);
             }
         });
+        txtDireccion.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtDireccionKeyReleased(evt);
+            }
+        });
+
+        txtRutCliente.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtRutClienteKeyReleased(evt);
+            }
+        });
 
         chkPuedeFiar.setText("Si.");
+        chkPuedeFiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chkPuedeFiarActionPerformed(evt);
+            }
+        });
+        chkPuedeFiar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                chkPuedeFiarKeyReleased(evt);
+            }
+        });
 
         jLabel2.setText("Rut Cliente");
 
@@ -94,6 +140,11 @@ public class AgregarClientes extends javax.swing.JFrame {
         });
 
         cmbRegion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Región", "Item 2", "Item 3", "Item 4" }));
+        cmbRegion.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                cmbRegionKeyReleased(evt);
+            }
+        });
 
         jLabel3.setText("Nombre");
 
@@ -103,14 +154,27 @@ public class AgregarClientes extends javax.swing.JFrame {
                 cmbProvinciaActionPerformed(evt);
             }
         });
+        cmbProvincia.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                cmbProvinciaKeyReleased(evt);
+            }
+        });
 
         txtNombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtNombreKeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtNombreKeyTyped(evt);
             }
         });
 
         cmbComuna.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Comuna", "Item 2", "Item 3", "Item 4" }));
+        cmbComuna.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                cmbComunaKeyReleased(evt);
+            }
+        });
 
         jLabel4.setText("Telefono");
 
@@ -122,6 +186,9 @@ public class AgregarClientes extends javax.swing.JFrame {
             }
         });
         txtTelefono.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtTelefonoKeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtTelefonoKeyTyped(evt);
             }
@@ -305,7 +372,58 @@ public class AgregarClientes extends javax.swing.JFrame {
 
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
         Limpiar();
+        btnLimpiar.setEnabled(false);
+        btnCrear.setEnabled(false);
     }//GEN-LAST:event_btnLimpiarActionPerformed
+
+    private void txtRutClienteKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtRutClienteKeyReleased
+       habilitarBoton();
+       habilitarBotonLimpiar();
+       
+    }//GEN-LAST:event_txtRutClienteKeyReleased
+
+    private void txtNombreKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreKeyReleased
+       habilitarBoton();
+       habilitarBotonLimpiar();
+    }//GEN-LAST:event_txtNombreKeyReleased
+
+    private void txtTelefonoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTelefonoKeyReleased
+       habilitarBoton();
+       habilitarBotonLimpiar();
+    }//GEN-LAST:event_txtTelefonoKeyReleased
+
+    private void txtEmailKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtEmailKeyReleased
+        habilitarBoton();
+        habilitarBotonLimpiar();
+    }//GEN-LAST:event_txtEmailKeyReleased
+
+    private void txtDireccionKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDireccionKeyReleased
+        habilitarBoton();
+        habilitarBotonLimpiar();
+    }//GEN-LAST:event_txtDireccionKeyReleased
+
+    private void cmbRegionKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cmbRegionKeyReleased
+        habilitarBoton();
+        habilitarBotonLimpiar();
+    }//GEN-LAST:event_cmbRegionKeyReleased
+
+    private void cmbProvinciaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cmbProvinciaKeyReleased
+        habilitarBoton();
+        habilitarBotonLimpiar();
+    }//GEN-LAST:event_cmbProvinciaKeyReleased
+
+    private void cmbComunaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_cmbComunaKeyReleased
+        habilitarBoton();
+        habilitarBotonLimpiar();
+    }//GEN-LAST:event_cmbComunaKeyReleased
+
+    private void chkPuedeFiarKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_chkPuedeFiarKeyReleased
+        
+    }//GEN-LAST:event_chkPuedeFiarKeyReleased
+
+    private void chkPuedeFiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkPuedeFiarActionPerformed
+        
+    }//GEN-LAST:event_chkPuedeFiarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -366,6 +484,7 @@ public class AgregarClientes extends javax.swing.JFrame {
     private javax.swing.JTextField txtTelefono;
     // End of variables declaration//GEN-END:variables
 
+    
 
 private void Limpiar()
 {
