@@ -59,7 +59,7 @@ public class ActualizarFiados extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Actualizar estado de fiados");
 
-        cmbRut.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbRut.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Rut", "Item 2", "Item 3", "Item 4" }));
 
         jLabel2.setText("Lista de Rut:");
 

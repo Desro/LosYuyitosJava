@@ -51,6 +51,17 @@ public class PedidoProveedores extends javax.swing.JFrame {
 
         jLabel3.setText("Cantidad:");
 
+        txtCantidad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCantidadActionPerformed(evt);
+            }
+        });
+        txtCantidad.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtCantidadKeyTyped(evt);
+            }
+        });
+
         tablePedido.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -66,7 +77,7 @@ public class PedidoProveedores extends javax.swing.JFrame {
 
         jLabel4.setText("Categoria:");
 
-        cmbCategoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbCategoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Categoria", "Item 2", "Item 3", "Item 4" }));
 
         lblProductosProveedor.setFont(new java.awt.Font("Rockwell", 1, 20)); // NOI18N
         lblProductosProveedor.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -76,7 +87,7 @@ public class PedidoProveedores extends javax.swing.JFrame {
 
         jLabel1.setText("Nombre Proveedor:");
 
-        cmbNombreProveedor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbNombreProveedor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Proveedor", "Item 2", "Item 3", "Item 4" }));
 
         btnLimpiar.setText("Limpiar");
         btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
@@ -94,7 +105,7 @@ public class PedidoProveedores extends javax.swing.JFrame {
             }
         });
 
-        cmbProducto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbProducto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Producto", "Item 2", "Item 3", "Item 4" }));
 
         jLabel6.setText("Fecha de pedido");
 
@@ -232,6 +243,16 @@ public class PedidoProveedores extends javax.swing.JFrame {
             
         }
     }//GEN-LAST:event_btnHacerPedidoActionPerformed
+
+    private void txtCantidadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCantidadKeyTyped
+        char c = evt.getKeyChar();
+     
+     if (c<'0' || c>'9') evt.consume();
+    }//GEN-LAST:event_txtCantidadKeyTyped
+
+    private void txtCantidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCantidadActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCantidadActionPerformed
 
     /**
      * @param args the command line arguments

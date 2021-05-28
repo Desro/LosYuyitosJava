@@ -17,6 +17,7 @@ public class AgregarClientes extends javax.swing.JFrame {
      */
     public AgregarClientes() {
         initComponents();
+        
     }
 
     /**
@@ -64,6 +65,11 @@ public class AgregarClientes extends javax.swing.JFrame {
         jLabel6.setText("Dirección");
 
         btnLimpiar.setText("Limpiar");
+        btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Rockwell", 0, 24)); // NOI18N
         jLabel1.setText("Clientes");
@@ -87,22 +93,39 @@ public class AgregarClientes extends javax.swing.JFrame {
             }
         });
 
-        cmbRegion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbRegion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Región", "Item 2", "Item 3", "Item 4" }));
 
         jLabel3.setText("Nombre");
 
-        cmbProvincia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbProvincia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Provincia", "Item 2", "Item 3", "Item 4" }));
         cmbProvincia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbProvinciaActionPerformed(evt);
             }
         });
 
-        cmbComuna.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        txtNombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNombreKeyTyped(evt);
+            }
+        });
+
+        cmbComuna.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Comuna", "Item 2", "Item 3", "Item 4" }));
 
         jLabel4.setText("Telefono");
 
         jLabel8.setText("Región");
+
+        txtTelefono.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTelefonoActionPerformed(evt);
+            }
+        });
+        txtTelefono.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtTelefonoKeyTyped(evt);
+            }
+        });
 
         jLabel9.setText("Provincia");
 
@@ -223,10 +246,7 @@ public class AgregarClientes extends javax.swing.JFrame {
         // TODO add your handling code here:
         try{
             Cliente auxCliente = new Cliente();
-            if(this.txtRutCliente.getText()== null || this.txtNombre.getText() == null || this.txtTelefono.getText()==null ||
-                this.txtEmail.getText()==null || this.txtDireccion.getText()==null || this.chkPuedeFiar.isSelected() == true ||
-                this.cmbRegion.getSelectedItem() == "Seleccione..." || this.cmbProvincia.getSelectedItem() == "Seleccione..." ||
-                this.cmbComuna.getSelectedItem() == "Seleccione...")
+            if(this.txtRutCliente.getText().isEmpty() || this.txtNombre.getText().isEmpty() || this.txtTelefono.getText().isEmpty() || this.txtEmail.getText().isEmpty() || this.txtDireccion.getText().isEmpty() || this.chkPuedeFiar.isSelected() == true || this.cmbRegion.getSelectedIndex() == 0 || this.cmbProvincia.getSelectedIndex() == 0 || this.cmbComuna.getSelectedIndex() == 0) 
             {
                 JOptionPane.showMessageDialog(null,"Todos los datos son obligatorios");
             }
@@ -264,6 +284,28 @@ public class AgregarClientes extends javax.swing.JFrame {
     private void cmbProvinciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbProvinciaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cmbProvinciaActionPerformed
+
+    private void txtTelefonoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTelefonoKeyTyped
+     
+     char c = evt.getKeyChar();
+     
+     if (c<'0' || c>'9') evt.consume();
+        
+    }//GEN-LAST:event_txtTelefonoKeyTyped
+
+    private void txtNombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreKeyTyped
+        char c = evt.getKeyChar();
+        
+        if((c<'a' || c>'z') && (c<'A' || c>'Z')) evt.consume();
+    }//GEN-LAST:event_txtNombreKeyTyped
+
+    private void txtTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefonoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTelefonoActionPerformed
+
+    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+        Limpiar();
+    }//GEN-LAST:event_btnLimpiarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -323,4 +365,18 @@ public class AgregarClientes extends javax.swing.JFrame {
     private javax.swing.JTextField txtRutCliente;
     private javax.swing.JTextField txtTelefono;
     // End of variables declaration//GEN-END:variables
+
+
+private void Limpiar()
+{
+   txtRutCliente.setText("");
+   txtNombre.setText("");
+   txtTelefono.setText("");
+   txtDireccion.setText("");
+   txtEmail.setText("");
+   cmbRegion.setSelectedIndex(0);
+   cmbProvincia.setSelectedIndex(0);
+   cmbComuna.setSelectedIndex(0);
+   chkPuedeFiar.setSelected(false);
+}
 }

@@ -41,7 +41,7 @@ public class Abonos extends javax.swing.JFrame {
         txtFechaVencimiento = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        cboRutAdeudados = new javax.swing.JComboBox<>();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         txtNuevoMonto = new javax.swing.JTextField();
@@ -74,11 +74,22 @@ public class Abonos extends javax.swing.JFrame {
 
         jLabel5.setText("N° boleta");
 
+        txtBoleta.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtBoletaKeyTyped(evt);
+            }
+        });
+
         jLabel6.setText("Fecha Vencimiento");
 
         jLabel7.setText("Rut adeudados:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cboRutAdeudados.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Rut", "Item 2", "Item 3", "Item 4" }));
+        cboRutAdeudados.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cboRutAdeudadosItemStateChanged(evt);
+            }
+        });
 
         jLabel8.setBackground(new java.awt.Color(167, 172, 172));
         jLabel8.setFont(new java.awt.Font("Rockwell", 0, 24)); // NOI18N
@@ -116,7 +127,7 @@ public class Abonos extends javax.swing.JFrame {
                             .addGap(44, 44, 44)
                             .addComponent(jLabel7)
                             .addGap(18, 18, 18)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(cboRutAdeudados, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(71, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -140,7 +151,7 @@ public class Abonos extends javax.swing.JFrame {
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cboRutAdeudados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(36, 36, 36)
                 .addComponent(jLabel8)
                 .addGap(30, 30, 30)
@@ -189,6 +200,16 @@ public class Abonos extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnAbonarActionPerformed
 
+    private void txtBoletaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBoletaKeyTyped
+        char c = evt.getKeyChar();
+     
+     if (c<'0' || c>'9') evt.consume();
+    }//GEN-LAST:event_txtBoletaKeyTyped
+
+    private void cboRutAdeudadosItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cboRutAdeudadosItemStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cboRutAdeudadosItemStateChanged
+
     /**
      * @param args the command line arguments
      */
@@ -227,7 +248,7 @@ public class Abonos extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAbonar;
     private javax.swing.JButton btnVolver;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> cboRutAdeudados;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

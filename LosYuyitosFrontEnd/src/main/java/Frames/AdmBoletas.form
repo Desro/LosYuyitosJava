@@ -349,7 +349,7 @@
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
+            <StringItem index="0" value="Seleccione Rut"/>
             <StringItem index="1" value="Item 2"/>
             <StringItem index="2" value="Item 3"/>
             <StringItem index="3" value="Item 4"/>
@@ -364,7 +364,7 @@
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
+            <StringItem index="0" value="Seleccione Boleta"/>
             <StringItem index="1" value="Item 2"/>
             <StringItem index="2" value="Item 3"/>
             <StringItem index="3" value="Item 4"/>
@@ -376,6 +376,9 @@
       </AuxValues>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField5">
+      <Events>
+        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="jTextField5KeyTyped"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel9">
       <Properties>

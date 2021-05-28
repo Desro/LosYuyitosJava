@@ -57,6 +57,17 @@ public class Proveedores extends javax.swing.JFrame {
 
         jLabel2.setText("Nombre de proveedor");
 
+        txtTelefono.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTelefonoActionPerformed(evt);
+            }
+        });
+        txtTelefono.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtTelefonoKeyTyped(evt);
+            }
+        });
+
         jLabel3.setText("Telefono");
 
         jLabel4.setText("Email");
@@ -65,15 +76,15 @@ public class Proveedores extends javax.swing.JFrame {
 
         jLabel6.setText("Región");
 
-        cmbRegion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbRegion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Región", "Item 2", "Item 3", "Item 4" }));
 
         jLabel7.setText("Provincia");
 
-        cmbProvincia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbProvincia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Provincia", "Item 2", "Item 3", "Item 4" }));
 
         jLabel8.setText("Comuna");
 
-        cmbComuna.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbComuna.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Comuna", "Item 2", "Item 3", "Item 4" }));
 
         btnCrear.setText("Crear");
         btnCrear.addActionListener(new java.awt.event.ActionListener() {
@@ -94,7 +105,7 @@ public class Proveedores extends javax.swing.JFrame {
 
         jLabel9.setText("Rubro");
 
-        cmbRubro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbRubro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione Rubro", "Item 2", "Item 3", "Item 4" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -133,10 +144,10 @@ public class Proveedores extends javax.swing.JFrame {
                                 .addGap(39, 39, 39)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(cmbComuna, 0, 108, Short.MAX_VALUE)
+                                .addComponent(cmbComuna, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(cmbProvincia, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(cmbRegion, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(cmbRubro, 0, 108, Short.MAX_VALUE))
+                                .addComponent(cmbRubro, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(btnCrear)
                                 .addGap(43, 43, 43)
@@ -201,10 +212,10 @@ public class Proveedores extends javax.swing.JFrame {
 
     private void btnCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearActionPerformed
         // TODO add your handling code here:
-        try{
+       try{
             Proveedor auxProveedor = new Proveedor();
-            if(this.txtDireccion.getText() == "" || this.txtEmail.getText() == null ||
-               this.txtNombreProveedor.getText() == null || this.txtTelefono.getText() == null ||
+            if(this.txtDireccion.getText().isEmpty() || this.txtEmail.getText().isEmpty() ||
+               this.txtNombreProveedor.getText().isEmpty() || this.txtTelefono.getText().isEmpty() ||
                this.cmbRegion.getSelectedIndex() == 0 || this.cmbProvincia.getSelectedIndex() == 0 ||
                this.cmbComuna.getSelectedIndex() == 0 || this.cmbRubro.getSelectedIndex() == 0)
             {
@@ -231,6 +242,16 @@ public class Proveedores extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Cliente no se pudo guardar" +ex.getMessage());
         }
     }//GEN-LAST:event_btnCrearActionPerformed
+
+    private void txtTelefonoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTelefonoKeyTyped
+        char c = evt.getKeyChar();
+     
+     if (c<'0' || c>'9') evt.consume();
+    }//GEN-LAST:event_txtTelefonoKeyTyped
+
+    private void txtTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefonoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTelefonoActionPerformed
 
     /**
      * @param args the command line arguments

@@ -61,6 +61,12 @@ public class VentaProductos extends javax.swing.JFrame {
 
         lblCantidad.setText("Cantidad:");
 
+        txtCantidad.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtCantidadKeyTyped(evt);
+            }
+        });
+
         btnAgregar.setText("Agregar");
         btnAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -247,6 +253,12 @@ public class VentaProductos extends javax.swing.JFrame {
         mn.setVisible(true);
         super.dispose();
     }//GEN-LAST:event_btnVolverActionPerformed
+
+    private void txtCantidadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCantidadKeyTyped
+        char c = evt.getKeyChar();
+     
+     if (c<'0' || c>'9') evt.consume();
+    }//GEN-LAST:event_txtCantidadKeyTyped
 
     /**
      * @param args the command line arguments
